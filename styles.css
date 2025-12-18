@@ -80,13 +80,13 @@
    Los programas que aparecen arriba a la izquierda
    ======================================== */
 .escritorio-iconos {
-    padding: 20px;
+    padding: 50px;
     /* Espacio alrededor de los iconos */
     display: flex;
     /* Usamos flexbox para organizar */
     flex-direction: column;
     /* Los iconos van uno debajo del otro */
-    gap: 20px;
+    gap: 90px;
     /* Espacio entre cada icono */
     align-items: flex-start;
     /* Los alinea a la izquierda */
@@ -100,7 +100,7 @@
     /* Imagen arriba, texto abajo */
     align-items: center;
     /* Centra el contenido */
-    width: 80px;
+    width: 100px;
     /* Ancho de cada icono */
     text-decoration: none;
     /* Quita el subrayado del link */
@@ -188,7 +188,7 @@
     /* Ancho del botón */
     height: 30px;
     /* Alto del botón */
-    background: linear-gradient(to bottom, #4eb5e5, #1e5799);
+    background: linear-gradient(to bottom, #bce8fc);
     /* Degradado azul de arriba a abajo */
     border: 1px solid rgba(255, 255, 255, 0.3);
     /* Borde blanco sutil */
@@ -202,8 +202,6 @@
     /* Centra verticalmente */
     justify-content: center;
     /* Centra horizontalmente */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    /* Sombra para dar profundidad */
 }
 
 /* El logo de Windows dentro del botón */
@@ -254,8 +252,8 @@
     /* Alineado a la izquierda */
     width: 300px;
     /* Ancho del menú */
-    background: rgba(0, 0, 0, 0.85);
-    /* Fondo negro casi opaco */
+    background: rgba(0, 0, 0, 0.4);
+    /* Fondo negro más claro para ver mejor las imágenes */
     border: 1px solid rgba(255, 255, 255, 0.2);
     /* Borde blanco sutil */
     opacity: 0;
@@ -634,15 +632,13 @@
 .cambiarUsuario button {
     width: 100%;
     /* El botón llena su contenedor */
-    height: 35px;
+    height: 29px;
     /* Altura cómoda */
-    border-radius: 5px;
+    border-radius: 4.5px;
     /* Bordes redondeados consistentes */
     background: linear-gradient(to bottom, #4eb5e5, #1e5799);
     /* Mismo degradado que el tema */
     border: 1px solid rgba(255, 255, 255, 0.3);
-    /* Borde sutil */
-    color: white;
     font-size: 14px;
     /* Tamaño de letra equilibrado */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
