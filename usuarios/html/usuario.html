@@ -1,56 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleccionar Usuario</title>
     <!-- Enlazamos los archivos CSS externos -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="usuarios.css">
+    <link rel="stylesheet" href="../css/usuarios.css">
+   
 </head>
 
 <body>
-
-    <!-- PANTALLA DE SELECCIÓN DE USUARIOS -->
     <div class="pantalla-usuarios">
-
-        <!-- Título -->
         <h1 class="titulo-usuarios">Seleccionar Usuario</h1>
-
-        <!-- Contenedor de las tarjetas de usuarios - VERTICAL -->
         <div class="contenedor-usuarios">
-
-            <!-- Usuario 1 -->
-            <!-- data-usuario="1" es un atributo personalizado que guarda el número de usuario -->
-            <!-- data-password="1234" es donde guardamos la contraseña de este usuario -->
+            <!-- password="1234" -->
             <div class="usuario-card" data-usuario="1" data-password="1234">
                 <div class="usuario-foto">
-                    <img src="../trabajo-en-equipo/imagenes/fotos de usuarios/2.jpg" alt="Usuario 1">
+                    <img src="../1.jpg" alt="Usuario 1">
                 </div>
                 <span class="usuario-nombre">Usuario 1</span>
             </div>
 
-            <!-- Usuario 2 -->
-            <!-- Puedes cambiar "abcd" por la contraseña que quieras -->
+            <!-- password="abcd" -->
             <div class="usuario-card" data-usuario="2" data-password="abcd">
                 <div class="usuario-foto">
-                    <img src="../trabajo-en-equipo/imagenes/fotos de usuarios/1.jpg" alt="Usuario 2">
-
+                    <img src="../2.jpg" alt="Usuario 2">
                 </div>
                 <span class="usuario-nombre">Usuario 2</span>
             </div>
-
         </div>
 
         <!-- Botón de apagar -->
         <button class="boton-apagar" title="Apagar">
             ⏻
         </button>
-
     </div>
 
-    <!-- MODAL DE CONTRASEÑA -->
     <!-- Esta es la ventanita que aparece para pedir la contraseña -->
     <div class="modal-fondo" id="modal">
         <div class="modal-contenido">
@@ -89,10 +74,7 @@
         </div>
     </div>
 
-    <!-- Enlazamos el archivo JavaScript al FINAL del body -->
-    <!-- Es importante que esté al final para que el HTML ya exista cuando el JS lo busque -->
-    <script src="usuarios.js"></script>
+    <script src="../usuarios.js"></script>
 
 </body>
-
 </html>

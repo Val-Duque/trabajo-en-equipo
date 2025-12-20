@@ -30,11 +30,7 @@
     justify-content: center; /* Centra verticalmente 
     z-index: 9999; /* Se pone encima de todo lo demás 
     animation: fadeOut 2s ease-in-out 3s forwards; /* Después de 3 segundos se desvanece en 2 segundos */
-}
-
-/* ========================================
-   
-
+    
 /* ========================================
    SPINNER DE CARGA
    La ruedita que gira mientras carga

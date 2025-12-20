@@ -94,7 +94,7 @@ function verificarPassword() {
     if (passwordIngresada === passwordCorrecta) {
         // ¡Contraseña correcta! Redirigimos al escritorio
         // window.location.href cambia la página actual
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     } else {
         // Contraseña incorrecta, mostramos el error
         modalError.style.display = 'block';
