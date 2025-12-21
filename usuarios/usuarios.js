@@ -61,8 +61,6 @@ function verificarPassword() {
         if (usuarioActual.includes('Usuario 2')) {
             window.location.href = 'usuario2.html'; // Relativo a usuarios/html/ si estamos ahí
         } else {
-            // Asumimos que Usuario 1 va al index principal (raíz/index.html)
-            // Estamos en usuarios/html/SeleccionDeUsu.html, así que subir dos niveles
             window.location.href = '../../index.html';
         }
     } else {
