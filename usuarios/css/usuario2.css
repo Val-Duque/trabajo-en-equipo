@@ -1,0 +1,41 @@
+/* ========================================
+   ESTILOS ESPECÍFICOS PARA USUARIO 2
+   Tema: Rojo / Azul Oscuro
+   ======================================== */
+
+body {
+    /* Fondo diferente para diferenciar */
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+    /* Nota: !important se usa aquí para sobreescribir el fondo por defecto si es necesario,
+       aunque idealmente se manejaría por cascada sin inline styles. */
+}
+
+.barra-tareas {
+    /* Barra de tareas en tono rojizo/oscuro para diferenciar */
+    background: rgba(0, 0, 0, 0.85) !important;
+    border-top: 1px solid #ff4444;
+}
+
+.boton-inicio {
+    filter: hue-rotate(150deg);
+    /* Cambia el color del logo un poco */
+}
+
+.gadget {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid #aaa;
+}
+
+.gadget-header {
+    background: linear-gradient(to bottom, #d32f2f, #b71c1c) !important;
+}
+
+/* Spinner rojo específico para Usuario 2 */
+.spinner {
+    border-top: 5px solid #ff4444;
+}
+
+/* Título de menú inicio rojo */
+.menu-titulo {
+    background: #b71c1c;
+}

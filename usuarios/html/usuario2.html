@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Vista - Usuario 2</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../css/usuario2.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE CARGA -->
+    <div class="pantalla-carga" id="pantalla-carga">
+        <h2 style="color: white; font-family: 'Segoe UI'; margin-bottom: 20px;">Iniciando Usuario 2...</h2>
+        <div class="spinner"></div>
+    </div>
+
+    <!-- SONIDO DE INICIO -->
+    <audio id="sonido-inicio" src="../../sonidos/inicio.mp3" preload="auto"></audio>
+
+    <div class="escritorio">
+
+        <div class="sidebar-gadgets">
+            <div class="gadget reloj-gadget">
+                <div class="gadget-header">
+                    <span class="gadget-title">Reloj</span>
+                    <button class="gadget-close">×</button>
+                </div>
+                <div class="gadget-content">
+                    <div class="reloj-digital">Usuario 2</div>
+                    <div class="fecha-actual">Bienvenido</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="escritorio-iconos">
+            <!-- Icono de Galería -->
+            <a href="../../apps/APP_GALLERY/gallery.html" class="icono">
+                <div class="icono-imagen">
+                    <img src="../../imagenes/galeria.png" alt="">
+                </div>
+                <span class="icono-nombre">Galería</span>
+            </a>
+
+            <!-- Icono de Calculadora -->
+            <a href="../../apps/calculator/calculator.html" class="icono">
+                <div class="icono-imagen">
+                    <img src="../../imagenes/calculadora.png" alt="">
+                </div>
+                <span class="icono-nombre">Calculadora</span>
+            </a>
+
+            <!-- Icono de Bloc de notas -->
+            <a href="../../apps/APP NOTAS/Notas.html" class="icono">
+                <div class="icono-imagen">
+                    <img src="../../imagenes/notas.png" alt="">
+                </div>
+                <span class="icono-nombre">Bloc de notas</span>
+            </a>
+        </div>
+
+        <div class="barra-tareas">
+
+            <button class="boton-inicio">
+                <img src="../../imagenes/windows.png" alt="">
+            </button>
+
+            <div class="menu-inicio">
+                <div class="menu-contenido">
+                    <h3 class="menu-titulo">Usuario 2</h3>
+
+                    <a href="../../apps/APP_GALLERY/gallery.html" class="menu-item">
+                        <img src="../../imagenes/galeria.png" alt="">
+                        <span>Galería</span>
+                    </a>
+
+                    <a href="../../apps/calculator/calculator.html" class="menu-item">
+                        <img src="../../imagenes/calculadora.png" alt="">
+                        <span>Calculadora</span>
+                    </a>
+
+                    <a href="../../apps/APP NOTAS/Notas.html" class="menu-item">
+                        <img src="../../imagenes/notas.png" alt="">
+                        <span>Bloc de notas</span>
+                    </a>
+
+                    <!-- OPCIONES DE SISTEMA -->
+                    <div class="opcionApagado">
+                        <a href="apagado.html">
+                            <button id="otroBoton">Apagado</button>
+                        </a>
+                    </div>
+
+                    <div class="opcionSalir">
+                        <button id="salir" onclick="salirDelSistema()">Salir</button>
+                    </div>
+
+                    <div class="cambiarUsuario">
+                        <a href="SeleccionDeUsu.html">
+                            <button>Cambiar de usuario</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reloj">12:00 PM</div>
+        </div>
+    </div>
+
+    <script>
+        function salirDelSistema() {
+            window.close();
+            alert("Para salir, por favor cierra esta pestaña del navegador.");
+        }
+
+        window.addEventListener('load', function () {
+            const sonido = document.getElementById('sonido-inicio');
+            const pantallaCarga = document.getElementById('pantalla-carga');
+
+            // 1. Reproducir sonido rápido
+            sonido.play().catch(e => console.log("Audio autoplay blocked"));
+
+            // 2. Ocultar pantalla de carga en 2 seg
+            setTimeout(function () {
+                pantallaCarga.classList.add('oculto');
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

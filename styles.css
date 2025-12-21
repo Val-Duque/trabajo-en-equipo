@@ -12,47 +12,6 @@
 }
 
 /* ========================================
-   PANTALLA DE CARGA
-   La primera pantalla que ves al abrir la página
-.pantalla-carga{
-    position: fixed; /* Se queda fija en la pantalla 
-    top: 0; /* Pegada arriba 
-    left: 0; /* Pegada a la izquierda 
-    width: 100vw; /* Ocupa todo el ancho de la pantalla 
-    height: 100vh; /* Ocupa todo el alto de la pantalla 
-    background-color: #000; /* Fondo negro 
-    background-image: url(imagenes/carga.jpg); /* Imagen de fondo de Windows Vista 
-    background-size: cover; /* La imagen cubre toda la pantalla 
-    background-position: center; /* Centra la imagen 
-    display: flex; /* Usamos flexbox para organizar los elementos 
-    flex-direction: column; /* Los elementos se ponen uno abajo del otro 
-    align-items: center; /* Centra horizontalmente 
-    justify-content: center; /* Centra verticalmente 
-    z-index: 9999; /* Se pone encima de todo lo demás 
-    animation: fadeOut 2s ease-in-out 3s forwards; /* Después de 3 segundos se desvanece en 2 segundos */
-    
-/* ========================================
-   SPINNER DE CARGA
-   La ruedita que gira mientras carga
-   ======================================== */
-.spinner {
-    width: 50px;
-    /* Ancho del spinner */
-    height: 50px;
-    /* Alto del spinner */
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    /* Borde gris transparente */
-    border-top-color: white;
-    /* La parte de arriba es blanca (esto crea el efecto de giro) */
-    border-radius: 50%;
-    /* Lo hace circular */
-    animation: spin 1s linear infinite;
-    /* Gira constantemente en 1 segundo */
-    margin-top: 300px;
-    /* Lo separa del logo de arriba */
-}
-
-/* ========================================
    ESCRITORIO
    El fondo principal donde están los iconos
    ======================================== */
@@ -333,46 +292,6 @@
     /* Alto del icono */
 }
 
-/* === SIDEBAR GADGETS ESTILO VISTA ===
-.sidebar-gadgets {
-    position: fixed;
-    top: 80px;
-    right: 20px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
-}
-
-.gadget {
-    background: rgba(0, 0, 0, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-}
-
-.gadget-header {
-    background: linear-gradient(to bottom, #4eb5e5, #1e5799);
-    color: white;
-    padding: 8px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.gadget-close {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    width: 16px;
-    height: 16px;
-} */
 
 /* ========================================
    ANIMACIONES
@@ -660,4 +579,49 @@
 .cambiarUsuario button a {
     display: none;
     /* Ocultamos los enlaces vacíos que estaban en el HTML por ahora para limpiar visualmente */
+}
+
+/* ========================================
+   ESTILOS DE PANTALLA DE CARGA (Añadido)
+   ======================================== */
+.pantalla-carga {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-out;
+    /* Desvanecimiento suave */
+}
+
+/* Ocultar pantalla de carga cuando termine */
+.pantalla-carga.oculto {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Spinner simple de carga (Base) */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #333;
+    border-top: 5px solid #00d8ff;
+    border-radius: 50%;
+    animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

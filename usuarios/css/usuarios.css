@@ -1,3 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* Fondo de la pantalla - Degradado azul elegante */
 .pantalla-usuarios {
     width: 100%;

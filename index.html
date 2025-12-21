@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Configuración básica de la página -->
-    <meta charset="UTF-8"> <!-- Define que se usen caracteres especiales como ñ, tildes, etc -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que se vea bien en celulares y tablets -->
-    <title>Windows Vista</title> <!-- El título que aparece en la pestaña del navegador -->
-    <link rel="stylesheet" href="styles.css"> <!-- Conecta este HTML con el archivo de estilos CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Vista</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <!-- PANTALLA DE CARGA: Esta es la primera pantalla que aparece cuando abres la página -->
-    <div class="pantalla-carga">
-        <div class="logo-carga"></div> <!-- Aquí va el logo de Windows que aparece al cargar -->
-        <div class="spinner"></div> <!-- Esta es la ruedita que gira mientras carga -->
+    <!-- PANTALLA DE CARGA: Animación de encendido -->
+    <div class="pantalla-carga" id="pantalla-carga">
+        <!-- Logo simulado de carga (puedes poner una imagen img aquí si tienes) -->
+        <h2 style="color: white; font-family: 'Segoe UI'; margin-bottom: 20px;">Iniciando Windows...</h2>
+        <div class="spinner"></div>
     </div>
 
     <!-- SONIDO DE INICIO: El famoso "ta-da" de Windows Vista -->
-    <audio id="sonido-inicio" src="sonidos/inicio.mp3"></audio>
+    <audio id="sonido-inicio" src="sonidos/inicio.mp3" preload="auto"></audio>
 
     <!-- ESCRITORIO PRINCIPAL: Todo lo que ves después de que carga -->
-    <div class="escritorio"> 
+    <div class="escritorio">
 
         <!-- BARRA LATERAL DE GADGETS: Los widgets que Windows Vista tenía a la derecha -->
         <div class="sidebar-gadgets">
-            
+
             <!-- GADGET DEL RELOJ: Muestra la hora y la fecha -->
             <div class="gadget reloj-gadget">
                 <div class="gadget-header"> <!-- La barra azul de arriba del gadget -->
@@ -35,7 +37,7 @@
                     <div class="fecha-actual">Jueves, 5 de Diciembre</div> <!-- La fecha del día -->
                 </div>
             </div>
-            
+
             <!-- GADGET DEL CALENDARIO: Muestra el calendario del mes -->
             <div class="gadget calendario-gadget">
                 <div class="gadget-header"> <!-- La barra azul de arriba -->
@@ -53,14 +55,14 @@
                         <div class="dia-semana">J</div> <!-- Jueves -->
                         <div class="dia-semana">V</div> <!-- Viernes -->
                         <div class="dia-semana">S</div> <!-- Sábado -->
-                        
+
                         <!-- Los números de los días del mes -->
                         <div class="dia"></div> <!-- Espacio vacío porque el 1 no cae en domingo -->
                         <div class="dia">1</div>
                         <div class="dia">2</div>
                         <div class="dia">3</div>
                         <div class="dia">4</div>
-                        <div class="dia">5</div> 
+                        <div class="dia">5</div>
                         <div class="dia">6</div>
                         <div class="dia">7</div>
                         <div class="dia">8</div>
@@ -94,7 +96,7 @@
 
         <!-- ICONOS DEL ESCRITORIO: Los programas que aparecen en el escritorio -->
         <div class="escritorio-iconos">
-            
+
             <!-- Icono de Galería -->
             <a href="apps/APP_GALLERY/gallery.html" class="icono"> <!-- Al hacer clic te lleva a la app de galería -->
                 <div class="icono-imagen">
@@ -102,7 +104,7 @@
                 </div>
                 <span class="icono-nombre">Galería</span> <!-- El nombre que aparece abajo del icono -->
             </a>
-            
+
             <!-- Icono de Calculadora -->
             <a href="apps/calculator/calculator.html" class="icono">
                 <div class="icono-imagen">
@@ -110,7 +112,7 @@
                 </div>
                 <span class="icono-nombre">Calculadora</span>
             </a>
-            
+
             <!-- Icono de Bloc de notas -->
             <a href="apps/APP NOTAS/Notas.html" class="icono">
                 <div class="icono-imagen">
@@ -118,12 +120,12 @@
                 </div>
                 <span class="icono-nombre">Bloc de notas</span>
             </a>
-            
-        </div> 
 
-           <!-- BARRA DE TAREAS: La barra de abajo como en Windows -->
-           <div class="barra-tareas">
-            
+        </div>
+
+        <!-- BARRA DE TAREAS: La barra de abajo como en Windows -->
+        <div class="barra-tareas">
+
             <!-- Botón de Inicio de Windows -->
             <button class="boton-inicio">
                 <img src="imagenes/windows.png" alt=""> <!-- Logo de Windows -->
@@ -133,7 +135,7 @@
             <div class="menu-inicio">
                 <div class="menu-contenido">
                     <h3 class="menu-titulo">Programas</h3> <!-- Título del menú -->
-                    
+
                     <!-- Lista de programas disponibles -->
                     <a href="apps/APP_GALLERY/gallery.html" class="menu-item">
                         <img src="imagenes/galeria.png" alt="">
@@ -150,15 +152,25 @@
                         <span>Bloc de notas</span>
                     </a>
 
-                    <!--opciones de los botones -->
+                    <!-- OPCIONES DEL SISTEMA: Apagar, Salir, Cambiar Usuario -->
+
+                    <!-- Botón Apagar: Lleva a la pantalla negra -->
                     <div class="opcionApagado">
-                        <button><a href=""></a>Apagar</button>
+                        <a href="usuarios/html/apagado.html">
+                            <button id="otroBoton">Apagado</button>
+                        </a>
                     </div>
+
+                    <!-- Botón Salir: Cierra la pestaña -->
                     <div class="opcionSalir">
-                        <button><a href=""></a>Salir</button>
+                        <button id="salir" onclick="salirDelSistema()">Salir</button>
                     </div>
+
+                    <!-- Botón Cambiar Usuario: Va a la selección de usuarios -->
                     <div class="cambiarUsuario">
-                        <button><a href=""></a>Cambiar de usuario</button>
+                        <a href="usuarios/html/SeleccionDeUsu.html">
+                            <button>Cambiar de usuario</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -167,18 +179,37 @@
             <!-- Reloj de la barra de tareas -->
             <div class="reloj">12:00 PM</div>
         </div>
-        
-    </div> 
+    </div>
 
-
-    <!-- JAVASCRIPT: El código que hace que funcionen las cosas -->
+    <!-- JAVASCRIPT: Lógica del sistema -->
     <script>
-        // Esto hace que cuando la página termine de cargar, reproduzca el sonido de inicio
-        window.addEventListener('load', function() {
-            const sonido = document.getElementById('sonido-inicio'); // Busca el audio
-            sonido.play(); // Lo reproduce automáticamente
+        // Función para cerrar la pestaña (Salir)
+        function salirDelSistema() {
+            // Intentamos cerrar la ventana
+            window.close();
+            // Si el navegador lo bloquea, mostramos un mensaje
+            alert("Para salir, por favor cierra esta pestaña del navegador.");
+        }
+
+        // Cuando la página carga completamente
+        window.addEventListener('load', function () {
+            const sonido = document.getElementById('sonido-inicio');
+            const pantallaCarga = document.getElementById('pantalla-carga');
+
+            // 1. Intentar reproducir el sonido rápidamente
+            // Nota: Los navegadores modernos bloquean el autoplay si el usuario no ha interactuado antes.
+            // Tratamos de reproducirlo de todos modos.
+            sonido.play().catch(error => {
+                console.log("El navegador bloqueó el audio automático: " + error);
+            });
+
+            // 2. Ocultar la pantalla de carga después de un momento breve (2 segundos)
+            // Esto da tiempo a que suene el audio y se vea la animación
+            setTimeout(function () {
+                pantallaCarga.classList.add('oculto');
+            }, 2000); // 2000 milisegundos = 2 segundos
         });
     </script>
-
 </body>
+
 </html>
