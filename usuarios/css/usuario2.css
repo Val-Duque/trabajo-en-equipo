@@ -6,8 +6,6 @@
 body {
     /* Fondo diferente para diferenciar */
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
-    /* Nota: !important se usa aquí para sobreescribir el fondo por defecto si es necesario,
-       aunque idealmente se manejaría por cascada sin inline styles. */
 }
 
 .barra-tareas {
